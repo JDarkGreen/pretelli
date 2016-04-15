@@ -56,7 +56,15 @@
 </section><!-- /.pageInicio__section-service -->
 
 <!-- LineA Separadora -->
-<span class="line-separator"></span><!-- /line separator -->
+<!--span class="line-separator"></span><!-- /line separator -->
+
+
+<!-- /**************************************************************/ -->
+<!-- /*++++++++++++++++ SECCION DE PRESENTACION +++++++++++++++++++*/ -->
+<!-- /**************************************************************/ -->
+<section class="pageInicio__section-presentation">
+asdasd
+</section><!-- /.pageInicio__section-presentation" -->
 
 <!-- /**************************************************************/ -->
 <!-- /*++++++++++++++++ INFORMACION ++++++++++++++++++++++*/ -->
@@ -141,7 +149,6 @@
 	
 	</div> <!-- /.row -->
 </section> <!-- /.container -->
-
 
 <!-- Footer -->
 <?php get_footer(); ?>
