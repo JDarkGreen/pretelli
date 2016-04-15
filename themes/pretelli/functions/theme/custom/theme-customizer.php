@@ -47,17 +47,6 @@ function pretelli_customize_register($wp_customize) {
 		'settings' => 'pretelli_custom_settings[red_social_fb]',
 		'type'     => 'text'
 	));
-	//youtube
-	$wp_customize->add_setting('pretelli_custom_settings[red_social_ytube]', array(
-		'default' => '',
-		'type' => 'option'
-	));
-	$wp_customize->add_control('pretelli_custom_settings[red_social_ytube]', array(
-		'label'    => __('Coloca el link de youtube de la empresa', LANG ),
-		'section'  => 'pretelli_redes_sociales',
-		'settings' => 'pretelli_custom_settings[red_social_ytube]',
-		'type'     => 'text'
-	));
 	//twitter
 	$wp_customize->add_setting('pretelli_custom_settings[red_social_twitter]', array(
 		'default' => '',
@@ -67,6 +56,28 @@ function pretelli_customize_register($wp_customize) {
 		'label'    => __('Coloca el link de twitter de la empresa', LANG ),
 		'section'  => 'pretelli_redes_sociales',
 		'settings' => 'pretelli_custom_settings[red_social_twitter]',
+		'type'     => 'text'
+	));
+	//gmail
+	$wp_customize->add_setting('pretelli_custom_settings[red_social_gmail]', array(
+		'default' => '',
+		'type' => 'option'
+	));
+	$wp_customize->add_control('pretelli_custom_settings[red_social_gmail]', array(
+		'label'    => __('Coloca el link de gmail de la empresa', LANG ),
+		'section'  => 'pretelli_redes_sociales',
+		'settings' => 'pretelli_custom_settings[red_social_gmail]',
+		'type'     => 'text'
+	));
+	//youtube
+	$wp_customize->add_setting('pretelli_custom_settings[red_social_ytube]', array(
+		'default' => '',
+		'type' => 'option'
+	));
+	$wp_customize->add_control('pretelli_custom_settings[red_social_ytube]', array(
+		'label'    => __('Coloca el link de youtube de la empresa', LANG ),
+		'section'  => 'pretelli_redes_sociales',
+		'settings' => 'pretelli_custom_settings[red_social_ytube]',
 		'type'     => 'text'
 	));
 
