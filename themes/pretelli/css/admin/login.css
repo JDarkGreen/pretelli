@@ -9,3 +9,5 @@ body.login{
 	background: url("../../images/admin/admin-logo.jpg") no-repeat; 
 	width: 264px;
 } 
+
+.login #backtoblog, .login #nav{ background: white; }

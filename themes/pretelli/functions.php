@@ -54,20 +54,22 @@ add_action('after_theme_setup', 'custom_theme_localization');
 /***********************************************************************************************/
 
 /***********************************************************************************************/
+/* Cargas opciones de la página y customizar widgets  */
+/***********************************************************************************************/
+require_once('functions/theme/admin/theme-customizer.php');
+
+/***********************************************************************************************/
 /* Agregar nuevos estilos panel de administracion   */
 /***********************************************************************************************/
-include_once("functions/theme/admin/admin-custom.php");
+require_once("functions/theme/admin/style-admin.php");
 
 
 /***********************************************************************************************/
 /* Agregar nuevas columnas en el panel de administracion   */
 /***********************************************************************************************/
-include_once("functions/theme/admin/new-columns.php");
+require_once("functions/theme/admin/new-columns.php");
 
-/***********************************************************************************************/
-/* Cargas opciones de la página y customizar widgets  */
-/***********************************************************************************************/
-require_once('functions/theme/custom/theme-customizer.php');
+
 
 
 ?>
