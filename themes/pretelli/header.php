@@ -49,7 +49,7 @@
 					<div class="col-xs-12">
 						<!-- Redes sociales -->
 						<ul class="social-links">
-							<li><?php _e('Siguenos en las redes' , LANG ); ?></li>
+							<li><?php _e('Síguenos: ' , LANG ); ?></li>
 							<!-- facebook -->
 							<?php $fb = $options['red_social_fb']; if( !empty($fb) ) : ?>
 							<li><a href="<?= $fb ?>" target="_blank"><img src="<?= IMAGES ?>/redes-sociales/redes_facebook_chico_superior.png" alt="" class="img-fluid" /></a></li>

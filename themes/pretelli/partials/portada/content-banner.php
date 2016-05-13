@@ -14,9 +14,9 @@
 	if ( $the_query->have_posts() ) : 
 
 ?>
-<section id="carousel-home" class="pageInicio__slider carousel slide" data-ride="carousel">
+<section id="carousel-home" class="pageInicio__slider carousel-fade carousel slide" data-ride="carousel">
   
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner " role="listbox">
 		<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?> 
 	    <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>">
 	    	<?php if( has_post_thumbnail() ) : ?>

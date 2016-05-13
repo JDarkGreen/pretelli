@@ -8,8 +8,32 @@ var j = jQuery.noConflict();
 		/*|----------------------------------------------------------------------|*/
 		/*|-----  CAROUSEL HOME -----|*/
 		/*|----------------------------------------------------------------------|*/
-		j("#carousel-home").carousel({
-			interval : 3000,
+		var carousel_home = j("#carousel-home").carousel({
+			interval : 5000,
+		});
+
+		//eventos
+		carousel_home.on('slid.bs.carousel', function ( e ) {
+			var current_item = j(this).find('.active');
+
+  			//animacion de las contenidos
+  			var title = current_item.find('h3');
+  			title.animate({ 'opacity' : '1' }, 1000 );
+
+  			var text = current_item.find('p');
+  			text.animate({ 'margin-left' : '0' } , 1500 );
+
+		});
+
+		carousel_home.on('slide.bs.carousel', function ( e ) {
+			var current_item = j(this).find('.active');
+
+			//animacion de las contenidos
+  			var title = current_item.find('h3');
+  			title.css('opacity',0 );
+ 
+  			var text = current_item.find('p');
+  			text.css({ 'margin-left' : '-130%' });
 		});
 
 		/*|----------------------------------------------------------------------|*/
@@ -25,8 +49,8 @@ var j = jQuery.noConflict();
 			responsiveClass: true,
 			mouseDrag      : false,
 			autoplayTimeout: 2500,
-			fluidSpeed     : 250,
-			smartSpeed     : 250,
+			fluidSpeed     : 2000,
+			smartSpeed     : 2000,
 			responsive:{
 		        320:{
 		            items:1
@@ -35,6 +59,16 @@ var j = jQuery.noConflict();
 		            items:4
 		        },
 	    	}
+		});
+
+		//Eventos flechas del Carouse
+		j(".ArrowCarouselServices").on('click',function(e){ e.preventDefault(); });
+		//Flechas
+		j("#ArrowCarouselServices--prev").on('click',function(){
+			carousel_servicios.trigger('prev.owl.carousel', [700] );
+		});
+		j("#ArrowCarouselServices--next").on('click',function(){
+			carousel_servicios.trigger('next.owl.carousel', [700] );
 		});
 
 		/*|----------------------------------------------------------------------|*/

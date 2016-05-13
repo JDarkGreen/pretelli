@@ -35,28 +35,28 @@
 					<!-- facebook -->
 					<?php if( isset( $options['red_social_fb'] ) && !empty($options['red_social_fb']) ) : ?>
 						<li><a href="<?= $options['red_social_fb'] ?>" target="_blank">
-							<img src="<?= IMAGES ?>/redes-sociales/redes_facebook.png" alt="facebook" class="img-fluid" />
+							<i class="fa fa-facebook" aria-hidden="true"></i>
 						</a></li>
 					<?php endif; ?>
 
 					<!-- twitter -->
 					<?php if( isset( $options['red_social_twitter'] ) && !empty($options['red_social_twitter']) ) : ?>
 						<li><a href="<?= $options['red_social_twitter'] ?>" target="_blank">
-							<img src="<?= IMAGES ?>/redes-sociales/redes_twitter.png" alt="twitter" class="img-fluid" />
+							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</a></li>
 					<?php endif; ?>
 
 					<!-- youtube -->
 					<?php if( isset( $options['red_social_ytube'] ) && !empty($options['red_social_ytube']) ) : ?>
 						<li><a href="<?= $options['red_social_ytube'] ?>" target="_blank">
-							<img src="<?= IMAGES ?>/redes-sociales/redes_youtube.png" alt="youtube" class="img-fluid" />
+							<i class="fa fa-youtube" aria-hidden="true"></i>
 						</a></li>
 					<?php endif; ?>
 
 					<!-- gmail -->
 					<?php if( isset( $options['red_social_gmail'] ) && !empty($options['red_social_gmail']) ) : ?>
 						<li><a href="<?= $options['red_social_gmail'] ?>" target="_blank">
-							<img src="<?= IMAGES ?>/redes-sociales/redes_google.png" alt="gplus" class="img-fluid" />
+							<i class="fa fa-google-plus" aria-hidden="true"></i>
 						</a></li>
 					<?php endif; ?>
 
