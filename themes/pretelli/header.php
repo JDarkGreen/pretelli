@@ -27,10 +27,7 @@
 </head>
 <body <?php body_class(); ?> >
 	
-	<?php 
-		$options = get_option('pretelli_custom_settings'); 
-		global $post;
-	?>
+	<?php $options = get_option('pretelli_custom_settings'); global $post; ?>
 
 	<!-- Header -->
 	<header class="mainHeader">

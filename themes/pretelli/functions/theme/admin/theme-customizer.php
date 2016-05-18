@@ -208,6 +208,36 @@ function pretelli_customize_register($wp_customize) {
 		'section'  => 'pretelli_widget_nosotros',
 		'settings' => 'pretelli_custom_settings[image_nosotros]',
 	)));
+
+	####>>>>>>>>>>>> MISION Y VISIÓN >>>>>>>>>>>>>>>>>>
+	$wp_customize->add_section('pretelli_mision_vision', array(
+		'title' => __('Misión y Visión Empresa', LANG),
+		'description' => __('Sección Misión y Visión Empresa', LANG),
+		'priority' => 41
+	));	
+	/* MISION */
+	$wp_customize->add_setting('pretelli_custom_settings[text_mision]', array(
+		'default' => '',
+		'type' => 'option'
+	));
+	$wp_customize->add_control('pretelli_custom_settings[text_mision]', array(
+		'label'    => __('Escribe el texto MISIÓN', LANG),
+		'section'  => 'pretelli_mision_vision',
+		'settings' => 'pretelli_custom_settings[text_mision]',
+		'type'     => 'textarea'
+	));	
+	/* VISION */
+	$wp_customize->add_setting('pretelli_custom_settings[text_vision]', array(
+		'default' => '',
+		'type' => 'option'
+	));
+	$wp_customize->add_control('pretelli_custom_settings[text_vision]', array(
+		'label'    => __('Escribe el texto VISIÓN', LANG),
+		'section'  => 'pretelli_mision_vision',
+		'settings' => 'pretelli_custom_settings[text_vision]',
+		'type'     => 'textarea'
+	));
+
 	
 }	
 ?>

@@ -79,7 +79,29 @@ var j = jQuery.noConflict();
 			auto    : 1500,
 			speed   : 1500,
 			visible : 3,	
-  	});
+  		});
+
+
+		/*|----------------------------------------------------------------------|*/
+		/*|-----  CAROUSEL GALERIAS DE PÁGINA - SECCIONES GENERALES   ------|*/
+		/*|----------------------------------------------------------------------|*/
+
+		var carousel_gallery = j(".pageCommon__gallery");
+
+		if( carousel_gallery.length ){
+			carousel_gallery.owlCarousel({
+				items          : 1,
+				lazyLoad       : false,
+				loop           : true,
+				nav            : false,
+				autoplay       : true,
+				responsiveClass: true,
+				mouseDrag      : false,
+				autoplayTimeout: 2500,
+				smartSpeed     : 1500,
+				dots           : true,
+			});
+		}
 
 
 

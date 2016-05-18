@@ -15,6 +15,9 @@ $pretelli_black_color     : #292929
 
 $green_color_title_article: #5D8848
 
+$pretelli_gray            : #969799
+$pretelli_gray_active     : #889191
+
 /***************************************************************************************/
 /**-------------------------- KEYFRAMES --------------------------------------- ------**/
 /***************************************************************************************/
@@ -55,12 +58,11 @@ body,html
 	align-items: center 
 
 //LINEA SEPARADORA
-/*°|| =========> */
 .line-separator
 	background: $gray_separator
 	display   : block 
 	height    : 3px
-	margin    : 37px 15px
+	margin    : 37px 0
 
 
 //BOTONES 
@@ -77,10 +79,7 @@ body,html
 	&:hover 
 		+scale( 1.2 )
 
-
-
-/*|| ==== >>>>>>>>>>>>>> REDES SOCIALES */
-
+//REDES SOCIALES */
 //ul 
 .social-links
 	list-style-type: none 
@@ -107,9 +106,9 @@ body,html
 					+opacity(0.9)
 					+rotateY( 360deg )
 
-/*°|| =================>> TITULOS */
+//TITULOS
 
-/*°|| =================>> SUBTITULOS */
+//SUBTITULOS */
 .PageCommon__subtitle
 	border-bottom: 1px solid black 
 	color        : $violet_color
@@ -124,14 +123,76 @@ body,html
 		height     : 100%
 		left       : -12px 
 		position   : absolute
+
 //Variación de Subtitulo
+
+//A color blanco
 .PageCommon__subtitle--white 
 	color        : white 
 	border-bottom: 1px solid white 	
 	&:before 
 		border-left: 3px solid white
+//Sin border
+.PageCommon__subtitle--no-border
+	border: none 
 
-//°|| ============>> SECCION ARTICULOS <<========================== ||°*/
+//BANNERS DE CADA PÁGINA
+
+//* Títulos 
+.pageCommon__banner__title
+	color     : white
+	left      : 0
+	margin    : -16px auto 0
+	position  : absolute
+	right     : 0
+	text-align: center
+	top       : 50%
+	//strong
+	strong 
+		border-left: 4px solid
+		display    : inline-block
+		line-height: 1em
+		padding    : 0 0 0 10px
+
+//BANNER DE SERVICIOS
+.pageCommon__banner-service
+	background: $pretelli_black_color 
+	color     : white 
+	padding   : 30px 
+	h2 
+		font-size: 28px 
+		margin   : 0
+	a 
+		border         : 1px solid white 
+		color          : white 
+		text-decoration: none 
+
+
+//GALERIAS DE CADA PÁGINA
+.pageCommon__gallery
+	background: black
+	//controles del carousel
+	.owl-controls
+		bottom    : 0
+		left      : 0
+		position  : absolute
+		right     : 0
+		text-align: center
+		//dots
+		.owl-dot
+			background   : $pretelli_gray
+			border-radius: 50%
+			display      : inline-block
+			height       : 15px
+			margin       : 0 4px 
+			width        : 15px
+		//active
+		.active 
+			background: $pretelli_gray_active
+
+
+/*----------------------------------------------------------------------*/
+// SECCION ARTICULOS */
 /*----------------------------------------------------------------------*/
 
 //seccion
@@ -306,7 +367,7 @@ body,html
 	right: -5px
 
 
-//°|| ============>> SECCION PRESENTACION
+//SECCION PRESENTACION
 .pageInicio__presentation
 	background: url("../images/pages/inicio/bg-nosotros.jpg") no-repeat
 	padding   : 18px 0
@@ -317,9 +378,28 @@ body,html
 	figure 
 		margin: 0 auto
 
-//°||==============>> SECCION MISCELANEA
+//SECCION MISCELANEA
 .pageInicio__miscelaneo
 	margin: 28px auto 0
+
+/***************************************************************************************/
+/**-------------------------  PAGINA NOSOTROS - EMPRESA ------------------------------**/
+/***************************************************************************************/
+
+//Tabs
+.pageNosotros__tabs
+	margin: 45px auto 0
+	//Sobreescribir estilos
+	.panel-default
+		.panel-heading
+			.panel-title
+				a 	
+					background     : $violet_color
+					color          : white 
+					display        : block
+					font-size      : 16px 
+					padding        : 8px 10px 
+					text-decoration: none 
 
 /***************************************************************************************/
 /**-------------------------- FOOTER  -----------------------------------------------**/
