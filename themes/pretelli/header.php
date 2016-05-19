@@ -45,7 +45,7 @@
 				<div class="col-xs-8">
 					<div class="col-xs-12">
 						<!-- Redes sociales -->
-						<ul class="social-links">
+						<ul class="social-links text-xs-right">
 							<li><?php _e('Síguenos: ' , LANG ); ?></li>
 							<!-- facebook -->
 							<?php $fb = $options['red_social_fb']; if( !empty($fb) ) : ?>

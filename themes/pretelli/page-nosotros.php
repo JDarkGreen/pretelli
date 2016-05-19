@@ -19,7 +19,7 @@
 <main class="container">
 
 	<!-- Seccion de Historia de la empresa -->
-	<section class="pageNosotros__content">
+	<section class="pageWrapper__content">
 		<div class="row">
 			<!-- Seccion Historia -->
 			<div class="col-xs-6">
@@ -106,10 +106,7 @@
 	<!-- Linea de Separación --> <div class="line-separator"></div>
 
 	<!-- Incluir Banner Comun a Servicios -->
-	<section class="pageCommon__banner-service container-flex text-uppercase">
-		<h2 class=""><?php _e( "consulta sobre nuestros servicios" , LANG ); ?></h2>
-		<a href=""><?php _e( 'click aquí' , LANG ); ?></a>
-	</section> <!-- /.pageCommon__banner-service -->
+	<?php include( locate_template('partials/banner-common-service.php') ); ?>
 
 	
 </main> <!-- /.container -->

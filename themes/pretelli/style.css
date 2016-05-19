@@ -12,7 +12,8 @@
 
 **********************************************************************************/
 
-@import url("css/bootstrap.min.css"); /*bootstrap*/
-@import url("css/owl.carousel.css"); /* owl carousel */
-@import url("css/font-awesome.min.css"); /* font awesome */
+@import url("css/bootstrap.min.css");  
+@import url("css/owl.carousel.css"); 
+@import url("css/font-awesome.min.css"); 
+@import url("css/parsley.css");
 @import url("css/master.css");

@@ -16,11 +16,19 @@ function load_custom_scripts()
 	//owl carousel /
 	wp_enqueue_script('owl-carousel', THEMEROOT . '/js/owl.carousel.min.js', array('jquery'), false , true);
 
+	//google maps
+	wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCNMUy9phyQwIbQgX3VujkkoV26-LxjbG0');
+  	wp_enqueue_script('google-jsapi','https://www.google.com/jsapi');
+
 	//cargar tether /
 	wp_enqueue_script('tether', THEMEROOT . '/js/tether.min.js', array('jquery'), '1.1.0', true);
 
 	//cargar bootstrap v4
 	wp_enqueue_script('bootstrap', THEMEROOT . '/js/bootstrap.min.js', array('jquery'), '4.0.0', true);
+
+	//cargar parsley
+	wp_enqueue_script('parsley', THEMEROOT . '/js/parsley.min.js', array('jquery'), '2.3.11', true);
+	wp_enqueue_script('p_idioma_es', THEMEROOT . '/js/i18n/es.js', '' , false , true);
 
 	//script
 	wp_enqueue_script('custom_script', THEMEROOT . '/js/script.js', array('jquery'), false, true);

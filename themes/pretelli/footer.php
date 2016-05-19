@@ -19,9 +19,18 @@
 				<h2 class="mainFooter__subtitle text-uppercase"><?php _e('contacto', LANG ); ?></h2>
 				<!-- Lista -->
 				<ul class="mainFooter__contact-list list-unstyled">
-					<li class="address"> jr tambo real n 280 of 208 santiago de surco</li>
-					<li class="phone"> 992 745 510 </li>
-					<li class="email"> info@grupopetrelli.pe </li>
+					<?php if( isset($options['contact_address']) && !empty($options['contact_address']) ) :?>
+						<li class="address"> <?= $options['contact_address']; ?> </li>
+					<?php endif; ?>
+					
+					<?php if( isset($options['contact_tel']) && !empty($options['contact_tel']) ) :?>
+						<li class="phone"> <?= $options['contact_tel'] ?> </li>
+					<?php endif; ?>
+
+					<?php if( isset($options['contact_email']) && !empty($options['contact_email']) ) :?>
+						<li class="email"> <?= $options['contact_email'] ?> </li>
+					<?php endif ?> 
+
 				</ul><!-- /mainFooter__contact-list  -->
 
 			</div><!-- /.col-xs-12 col-sm-4 -->
@@ -69,6 +78,8 @@
 		</div><!-- /.row -->
 	</div><!-- /.container -->
 </footer> <!-- /.mainFooter -->
+
+	<script> var url = "<?= THEMEROOT ?>"; </script>
 
 
 	<?php wp_footer(); ?>

@@ -16,6 +16,8 @@ $pretelli_black_color     : #292929
 $green_color_title_article: #5D8848
 
 $pretelli_gray            : #969799
+$pretelli_gray_menu       : #D1D1D1
+$pretelli_gray_link       : #939393
 $pretelli_gray_active     : #889191
 
 /***************************************************************************************/
@@ -66,10 +68,11 @@ body,html
 
 
 //BOTONES 
-/*°|| ======> BOTON VER MAS */
+//BOTON VER MAS */
 .btn__show-more
+	background     : transparent 
 	border         : 1px solid
-	color          : #fff !important
+	color          : #fff 
 	display        : inline-block 
 	padding        : 4px 15px
 	text-align     : center
@@ -78,6 +81,10 @@ body,html
 	//hover
 	&:hover 
 		+scale( 1.2 )
+//Variacion Violeta
+.btn__show-more--violet
+	border: 1px solid $violet_color
+	color : $violet_color
 
 //REDES SOCIALES */
 //ul 
@@ -85,7 +92,6 @@ body,html
 	list-style-type: none 
 	margin         : 0 auto 
 	padding        : 0
-	text-align     : right 
 	li 
 		color         : $violet_color
 		display       : inline-block
@@ -138,6 +144,11 @@ body,html
 
 //BANNERS DE CADA PÁGINA
 
+//Contenedor 
+.pageCommon__banner
+	figure
+		margin: 0 auto
+
 //* Títulos 
 .pageCommon__banner__title
 	color     : white
@@ -156,16 +167,24 @@ body,html
 
 //BANNER DE SERVICIOS
 .pageCommon__banner-service
-	background: $pretelli_black_color 
-	color     : white 
-	padding   : 30px 
+	align-items: center 
+	background : $pretelli_black_color 
+	color      : white 
+	padding    : 30px 
 	h2 
 		font-size: 28px 
 		margin   : 0
 	a 
 		border         : 1px solid white 
 		color          : white 
+		display        : block
+		margin         : 0 15px 
+		padding        : 5px 10px 
 		text-decoration: none 
+		+transition( all 500ms ease )
+		//Hover
+		&:hover 
+			+scale( 1.2 )
 
 
 //GALERIAS DE CADA PÁGINA
@@ -190,6 +209,9 @@ body,html
 		.active 
 			background: $pretelli_gray_active
 
+//CONTENEDOR COMUN 
+.pageWrapper__content 
+	margin: 40px auto 0
 
 /*----------------------------------------------------------------------*/
 // SECCION ARTICULOS */
@@ -248,12 +270,11 @@ body,html
 .mainHeader
 	padding: 14px 0 0
 
-
 /***************************************************************************************/
 /**-------------------------- NAVIGATION----------------------------------------------**/
 /***************************************************************************************/
 
-//°|=============>> navegacion principal
+//Navegacion principal
 .mainNavigation
 	ul
 		//main menu
@@ -286,7 +307,7 @@ body,html
 /**-------------------------- PAGINA DE INICIO PORTADA -------------------------------**/
 /***************************************************************************************/
 
-//°|| ===========>> SLIDER
+// SLIDER
 .pageInicio__slider
 	.carousel-inner
 		.carousel-item
@@ -320,7 +341,7 @@ body,html
 				font-size: 1.25em 
 				width    : 70%
 	 
-//°|| ============>> SECCION SERVICIOS
+// SECCION SERVICIOS
 .pageInicio__section-service
 	background: transparent
 	padding   : 35px 0
@@ -400,6 +421,166 @@ body,html
 					font-size      : 16px 
 					padding        : 8px 10px 
 					text-decoration: none 
+
+/***************************************************************************************/
+/**-------------------------  PAGINA SERVICIOS  --------------------------------------**/
+/***************************************************************************************/
+
+.pageServicios__menu
+	background: $pretelli_gray_menu
+	padding   : 17px 0
+	ul 
+		display        : flex
+		flex-wrap      : wrap
+		justify-content: center
+		list-style-type: none
+		margin         : 0 auto
+		padding        : 0
+		li 
+			a 
+				border-right   : 2px solid $pretelli_gray_link
+				color          : $pretelli_gray_link
+				font-weight    : 600 
+				line-height    : 1em 
+				padding        : 0 20px 
+				text-decoration: none
+				+transition( all 200ms ease-in )
+				//Hover u Active
+				&:hover, &.active 
+					color: $violet_color
+			//ultimo elemento
+			&:last-child 
+				a 
+					border-right: 0
+
+/***************************************************************************************/
+/**------------------------------  PAGINA BLOG  --------------------------------------**/
+/***************************************************************************************/
+
+//Seccion
+.pageBlog__content
+	justify-content: space-between
+//Artículos
+.pageBlog__article
+	margin: 0 0 20px
+	width : 30%
+	//Imagen 
+	figure 
+		overflow: hidden
+		img 
+			+transform( scale(1.0) translateZ(0) )
+			+transition( all 700ms ease-in )
+			backface-visibility: hidden
+
+	//Titulo
+	h2 
+		color      : $violet_color
+		font-size  : 23px
+		line-height: 1em 
+		margin     : 0 auto 22px
+	//Texto
+	p 
+		font-size: 15px
+	//Leer mas
+	a.read-more
+		color          : $violet_color
+		font-size      : 15px 
+		font-weight    : 500 
+		text-decoration: none
+		+transition( all 500ms ease )
+	//hover article 
+	&:hover
+		img 
+			+scale( 1.2 )
+		a.read-more
+			//icon 
+			i 
+				animation: pulse-right 1200ms ease-in-out infinite
+
+//* SINGLE BLOG
+.singleBlog__article
+	h2 
+		color    : $violet_color
+		font-size: 24px 
+
+//Aside de Categorias
+.singleBlog__categories
+	background: $pretelli_gray_menu
+	padding   : 25px 29px
+	//Titulo 
+	h2 
+		color    : $violet_color
+		font-size: 20px 
+		margin   : 0 auto 
+	//Menu
+	ul 
+		list-style-type: none 
+		margin         : 25px auto 
+		padding        : 0 
+		li 
+			a 
+				color          : $pretelli_gray_link 
+				text-decoration: none
+				+transition( all 400ms ease ) 
+				//before
+				&:before 
+					content       : "-"
+					display       : inline-block
+					vertical-align: top
+				//Hover
+				&:hover 
+					color: $violet_color
+
+/***************************************************************************************/
+/**------------------------------ PAGINA CONTACTO ------------------------------------**/
+/***************************************************************************************/
+
+//Sección Datos
+//Lista
+.pageContact__datos
+	list-style-type: none
+	margin         : 0 auto 60px
+	padding        : 0 
+	li 
+		color    : black
+		font-size: 15px 
+		margin   : 0 auto 15px 
+		padding  : 0 0 0 30px 
+		position : relative
+		//Icon 
+		i 
+			color     : $pretelli_gray_active
+			font-size : 20px 
+			left      : 0 
+			position  : absolute
+			text-align: center 
+			width     : 20px  
+
+//Formulario de Contacto
+.pageContacto__form
+	max-width: 370px 
+	width    : 100%
+
+//Grupos 
+.pageContacto__form__group
+	margin: 0 auto 15px
+	//inputs , text area 
+	input, textarea 
+		+border-radius( 5px )
+		border : 1px solid $pretelli_gray
+		color  : $pretelli_gray
+		display: block 
+		outline: 0 
+		padding: 5px 10px 
+		width  : 100%
+	textarea 
+		height    : 130px
+		max-height: 130px
+
+//Mapa 
+#canvas-map
+	height: 383px 
+	width : 100%
 
 /***************************************************************************************/
 /**-------------------------- FOOTER  -----------------------------------------------**/
