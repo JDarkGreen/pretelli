@@ -105,8 +105,11 @@
 					endif; 
 				?>
 
+				<!-- Pagina empresa -->
+				<?php $page_empresa = get_page_by_title('empresa'); ?>
+
 				<!-- Botón Ver Más -->
-				<a href="#" class="pull-right btn__show-more text-uppercase"><?php _e('ver más' , LANG ); ?> </a>
+				<a href="<?= $page_empresa->guid; ?>" class="pull-right btn__show-more text-uppercase"><?php _e('ver más' , LANG ); ?> </a>
 				<!-- Limpiar floats --> <div class="clearfix"></div>
 
 			</div><!-- /.col-xs-6 -->
