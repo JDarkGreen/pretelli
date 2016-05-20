@@ -22,7 +22,7 @@
 	<section class="pageWrapper__content">
 		<div class="row">
 			<!-- Seccion Historia -->
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-md-6">
 				<!-- Titulo --><h2 class="PageCommon__subtitle PageCommon__subtitle--no-border text-uppercase"><?php _e( "nuestra historia" , LANG ); ?></h2> <!-- /.PageCommon__subtitle -->
 
 				<!-- Contenido -->
@@ -43,7 +43,7 @@
 
 			</div> <!-- /col-xs-6 -->
 			<!--  -->
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-md-6">
 				<!-- Imagenes Galeria -->
 				<section id="carousel-gallery-empresa" class="pageNosotros__gallery pageCommon__gallery">
 					<?php  

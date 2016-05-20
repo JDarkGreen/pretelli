@@ -82,7 +82,7 @@
 <section class="pageInicio__presentation">
 	<div class="container">
 		<div class="row pageInicio__presentacion__content container-flex container-flex-center">
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-md-6">
 				<!-- Comprobar si existe la imagen -->
 				<?php if( isset($options['image_nosotros']) && !empty($options['image_nosotros']) ) :  
 					$url_image = $options['image_nosotros'];
@@ -92,7 +92,7 @@
 				</figure> <!-- /.figure -->
 				<?php endif; ?>
 			</div> <!-- /.col-xs-6 -->
-			<div class="col-xs-6 text-justify">
+			<div class="col-xs-12 col-md-6 text-justify">
 				<!-- Título -->
 				<h2 class="PageCommon__subtitle PageCommon__subtitle--white text-uppercase">
 					<?php _e('presentación', LANG ); ?>
@@ -110,6 +110,7 @@
 
 				<!-- Botón Ver Más -->
 				<a href="<?= $page_empresa->guid; ?>" class="pull-right btn__show-more text-uppercase"><?php _e('ver más' , LANG ); ?> </a>
+
 				<!-- Limpiar floats --> <div class="clearfix"></div>
 
 			</div><!-- /.col-xs-6 -->
@@ -149,13 +150,13 @@
 						<li>
 						<article class="sectionPage__articles__item">
 							<!-- Imagen -->
-							<figure class="pull-xs-left">
+							<figure class="pull-md-left">
 								<?php 
-									$image = get_the_post_thumbnail( $u_post->ID , 'full' , array('class'=>'img-fluid') ); 
+									$image = get_the_post_thumbnail( $u_post->ID , 'full' , array('class'=>'img-fluid center-block') ); 
 									if( !empty($image) ) : echo $image;
 									else:
 								?>
-									<img src="http://lorempixel.com/980/549/sports" alt="lorempixel" class="img-fluid" />
+									<img src="http://lorempixel.com/980/549/sports" alt="lorempixel" class="img-fluid center-block" />
 								<?php endif; ?>
 							</figure><!-- /figure -->
 							<!-- Texto -->
@@ -180,10 +181,10 @@
 			</section><!-- /.sectionPage__articles -->
 
 			<!-- Seccion widget facebook - Ocultar en version mobile -->
-			<section class="sectionHomeFacebook col-xs-12 col-sm-4 text-xs-center">
+			<section class="sectionHomeFacebook col-xs-12 col-sm-4">
 			
 				<!-- Titulo -->
-				<h2 class="PageCommon__subtitle text-uppercase text-xs-left"><?php _e('Facebook', LANG ); ?></h2>
+				<h2 class="PageCommon__subtitle text-uppercase text-md-left"><?php _e('Facebook', LANG ); ?></h2>
 
 				<?php $link_facebook = $options['red_social_fb']; 
 					if( !empty($link_facebook) ) :

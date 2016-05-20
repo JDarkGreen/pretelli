@@ -171,6 +171,7 @@ body,html
 	background : $pretelli_black_color 
 	color      : white 
 	padding    : 30px 
+	text-align : center
 	h2 
 		font-size: 28px 
 		margin   : 0
@@ -268,7 +269,30 @@ body,html
 
 //°| ========= >> header
 .mainHeader
-	padding: 14px 0 0
+	background: white
+	left      : 0
+	padding   : 14px 0 0
+	position  : fixed
+	right     : 0
+	z-index   : 9999999
+
+//Versión Mobile
+.mainHeader__mobile 
+	display        : flex 
+	justify-content: center
+	//Icon Header
+	.icon-header
+		font-size: 30px 
+		margin   : 0 15px 
+
+
+/***************************************************************************************/
+/**-------------------------- CONTENEDOR SLIDEBAR ------------------------------------**/
+/***************************************************************************************/
+
+.sidebar__content
+	padding: 20px 0
+
 
 /***************************************************************************************/
 /**-------------------------- NAVIGATION----------------------------------------------**/
@@ -390,14 +414,15 @@ body,html
 
 //SECCION PRESENTACION
 .pageInicio__presentation
-	background: url("../images/pages/inicio/bg-nosotros.jpg") no-repeat
-	padding   : 18px 0
+	background     : url("../images/pages/inicio/bg-nosotros.jpg") no-repeat
+	background-size: 100% 100%
+	padding        : 18px 0
 //Contenido
 .pageInicio__presentation
 	color: white
 	//Imagenes 
 	figure 
-		margin: 0 auto
+		margin: 0 auto 10px
 
 //SECCION MISCELANEA
 .pageInicio__miscelaneo
@@ -655,3 +680,125 @@ body,html
 	font-size  : 15px
 	font-weight: 700 
 	margin     : 0 auto
+
+/***************************************************************************************/
+/**-------------------------------- IDS   --------------------------------------------**/
+/***************************************************************************************/
+
+//Sb slider - contenedor version mobile
+#sb-site
+	padding: 6em 0 0 0
+
+
+
+/***************************************************************************************/
+/**-----------------------------  MEDIA QUERIES --------------------------------------**/
+/***************************************************************************************/
+
+//Max width 568px
+
+@media ( max-width: 568px )
+
+	/*|------- MAINHEADER --------|*/
+
+	//Header
+	.mainHeader
+		padding: 14px 0
+	//Logo 
+	.logo 
+		background: white 
+		margin    : 0 auto
+		width     : 75%
+
+	/*|------- NAVEGACIÓN PRINCIPAL --------|*/
+	.mainNavigation 
+		ul.mainMenu 
+			li
+				display: block
+				margin : 10px 0 
+				a 
+					color  : white
+					padding: 15px 27px
+
+	/*|------- PAGINA COMUN --------|*/
+
+	//Banner Servicios
+	.pageCommon__banner-service 
+		h2
+			margin: 0 auto 10px
+
+	//Subtitulos
+	.PageCommon__subtitle
+		font-size : 23px
+		margin    : 20px auto 
+		text-align: center
+		&:before
+			left: 0
+	
+	//Titulos de Banner de Pagina
+	.pageCommon__banner__title
+		font-size: 22px
+		margin   : -11px auto 0
+
+	//Contenedor Principal
+	.pageWrapper__content
+		margin: 20px auto 0
+
+	/*|------- PAGINA INICIO --------|*/
+
+	//Slider Home
+	.pageInicio__slider 
+		.carousel-inner 
+			.carousel-caption 
+				h3
+					font-size: 18px
+				p 
+					font-size  : 15px
+					line-height: 1em 
+
+	//Articulos preview
+	.sectionPage__articles__item 
+		figure
+			margin: 0 auto 15px 
+			width : 100%
+
+	/*|------- PÁGINA SERVICIOS ------|*/
+	.pageServicios__menu
+		ul
+			li 
+				margin: 5px auto 
+				width : 100%
+				a
+					border: none
+
+	/*|------- PÁGINA BLOG  --------|*/
+	.pageBlog__article
+		width: 100%
+
+	//Sidebar categorias
+	.singleBlog__categories
+		margin: 0 10px
+
+	/*|------- PÁGINA CONTACTO --------|*/
+	.pageContact__datos 
+		margin: 0 auto
+		li
+			display: inline-block
+
+
+	/*|------- FOOTER --------|*/
+
+	//Items
+	.mainFooter__item
+		margin    : 0 auto 30px
+		text-align: center
+
+	//Image web
+	.mainFooter__web
+		margin: 0 auto 
+
+	/*|------- IDS --------|*/
+
+	//Contenedor version mobile
+	#sb-site
+		padding: 4.5em 0 0 0

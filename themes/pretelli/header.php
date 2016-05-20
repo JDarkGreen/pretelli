@@ -8,7 +8,7 @@
 	<meta name="author" content="">
 
 	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
@@ -30,10 +30,12 @@
 	<?php $options = get_option('pretelli_custom_settings'); global $post; ?>
 
 	<!-- Header -->
-	<header class="mainHeader">
+	<header class="mainHeader sb-slide">
 		<!-- Container -->
 		<div class="container">
-			<div class="row">
+			
+			<!-- Solo en version Desktop -->
+			<div class="row hidden-xs-down">
 				<!-- Logo -->
 				<div class="col-xs-4">
 					<!-- Logo -->
@@ -79,8 +81,63 @@
 					</div><!-- /.col-xs-12 -->
 				</div><!-- /.col-xs-8 -->
 			</div><!-- /.row -->
+
+			<!-- Solo en version mobile -->
+			<section class="hidden-sm-up">
+				<div class="mainHeader__mobile ">
+
+						<!-- Icono abrir menu lateral -->
+						<div class="icon-header">
+							<i id="toggle-left-nav" class="fa fa-bars" aria-hidden="true"></i>
+						</div><!-- /.icon-header -->
+
+						<!-- Logo -->
+						<h1 class="logo">
+							<a href="<?= site_url() ?>">
+								<?php if( !empty($options['logo']) ) : ?>
+									<img src="<?= $options['logo'] ?>" alt="<?= "-logo-" . bloginfo('name') ?>" class="img-fluid center-block" />
+								<?php else: ?>
+									<img src="<?= IMAGES ?>/logo_pretelli.png" alt="<?= "-logo-" . bloginfo('name') ?>" class="img-fluid center-block" />
+								<?php endif; ?>
+							</a>
+						</h1> <!-- /.lgoo -->	
+
+						<!-- Icono abrir menu lateral derecha -->
+						<div class="icon-header">
+							<i id="toggle-right-nav" class="fa fa-bars" aria-hidden="true"></i>
+						</div><!-- /.icon-header -->	
+
+				</div> <!-- /.mainHeader__mobile -->
+			</section> <!-- /.visible-xs-block -->
+
 		</div><!-- /.container -->
 	</header><!-- /.mainHeader -->
+	
+	<!-- Contenedor Izquierda versión mobile -->
+	<aside class="sidebar__content sb-slidebar sb-left sb-style-push">
+		<!-- Logo -->
+		<h1 class="logo">
+			<a href="<?= site_url() ?>"><img src="<?= IMAGES ?>/logo_pretelli.png" alt="logo-pretelli" class="img-fluid" /></a>
+		</h1><!-- /.logo -->
 
+		<!-- Navegacion principal -->
+		<nav class="mainNavigation">
+			<?php 
+				wp_nav_menu(
+					array(
+						'menu_class'     => 'mainMenu list-inline text-center',
+						'theme_location' => 'main-menu'
+				));
+			?>
+		</nav><!-- /.mainNavigation -->
 
+  </aside> <!-- /.sb-slidebar sb-left -->	
 
+  <!-- Contenedor Izquierda versión mobile -->
+	<div class="sidebar__content sb-slidebar sb-right sb-style-push">
+		<!-- Incluir template de categorias -->
+		<?php include(locate_template('partials/categories-posts.php') ); ?>
+  </div> <!-- /.sb-slidebar sb-right -->
+
+	<!-- Slidebar  Contenedor -->
+	<div id="sb-site">

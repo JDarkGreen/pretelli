@@ -33,7 +33,7 @@
 				    <!-- Get the content -->
 				    <p><?= get_the_content(); ?></p>
 				    <!-- Boton ver más -->
-				    <a href="#" class="btn__show-more text-uppercase"><?php _e('ver más' , LANG ); ?></a>
+				    <a href="#" class="hidden-xs-down btn__show-more text-uppercase"><?php _e('ver más' , LANG ); ?></a>
 				  </div> <!-- /carousel-caption -->
 				</div><!-- /.container -->
 

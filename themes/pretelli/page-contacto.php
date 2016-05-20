@@ -24,11 +24,11 @@ include( locate_template("partials/banner-common-pages.php") );
 		<div class="row">
 
 			<!-- Seccion Datos Generales-->
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-md-6">
 				<!-- Titulo --><h2 class="PageCommon__subtitle PageCommon__subtitle--no-border text-uppercase"><?php _e( "datos generales" , LANG ); ?></h2> <!-- /.PageCommon__subtitle -->
 
 				<!-- Lista de Datos -->
-				<ul class="pageContact__datos">
+				<ul class="pageContact__datos text-xs-center text-md-left">
 
 					<!-- Telefono -->
 					<?php if( isset($options['contact_tel']) && !empty($options['contact_tel']) ) :?>
@@ -51,10 +51,10 @@ include( locate_template("partials/banner-common-pages.php") );
 			</div> <!-- /col-xs-6 -->
 
 			<!-- Seccion redes sociales  -->
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-md-6">
 				<!-- Titulo --><h2 class="PageCommon__subtitle PageCommon__subtitle--no-border text-uppercase"><?php _e( "redes sociales" , LANG ); ?></h2> <!-- /.PageCommon__subtitle -->
 
-				<ul class="social-links">
+				<ul class="social-links text-xs-center text-md-left">
 					<!-- facebook -->
 					<?php $fb = $options['red_social_fb']; if( !empty($fb) ) : ?>
 						<li><a href="<?= $fb ?>" target="_blank"><img src="<?= IMAGES ?>/redes-sociales/redes_facebook_chico_superior.png" alt="" class="img-fluid" /></a></li>
@@ -79,7 +79,7 @@ include( locate_template("partials/banner-common-pages.php") );
 		<div class="row">
 
 			<!-- Seccion Formulario-->
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-md-6">
 				<!-- Titulo --><h2 class="PageCommon__subtitle PageCommon__subtitle--no-border text-uppercase"><?php _e( "nuestro formulario" , LANG ); ?></h2> <!-- /.PageCommon__subtitle -->
 
 				<!-- Formulario -->
@@ -124,7 +124,7 @@ include( locate_template("partials/banner-common-pages.php") );
 			</div> <!-- /col-xs-6 -->
 
 			<!-- Seccion MAPA  -->
-			<div class="col-xs-6">
+			<div class="col-xs-12 col-md-6">
 				<!-- Titulo --><h2 class="PageCommon__subtitle PageCommon__subtitle--no-border text-uppercase"><?php _e( "mapa" , LANG ); ?></h2> <!-- /.PageCommon__subtitle -->
 
 				<!-- Mapa -->
