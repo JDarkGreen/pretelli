@@ -150,7 +150,7 @@
 						<li>
 						<article class="sectionPage__articles__item">
 							<!-- Imagen -->
-							<figure class="pull-md-left">
+							<figure class="">
 								<?php 
 									$image = get_the_post_thumbnail( $u_post->ID , 'full' , array('class'=>'img-fluid center-block') ); 
 									if( !empty($image) ) : echo $image;
@@ -159,19 +159,24 @@
 									<img src="http://lorempixel.com/980/549/sports" alt="lorempixel" class="img-fluid center-block" />
 								<?php endif; ?>
 							</figure><!-- /figure -->
-							<!-- Texto -->
-							<h3 class="sectionPage__articles__item__title">
-								<?php _e( $u_post->post_title , LANG ); ?></h3>
-							<!-- Extracto 30 palabras -->
-							<p class="sectionPage__articles__item__excerpt text-justify">
-								<?php _e( wp_trim_words( $u_post->post_content , 30 , '' ) , LANG ); ?>
-							</p>
-							<!-- Boton ver más -->
-							<a class="read-more" href="<?= $u_post->guid ?>">Leer más 
-								<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-							</a>
 
-						<!-- Limpiar float --> <div class="clearfix"></div>
+							<div class="container-text">
+								<!-- Texto -->
+								<h3 class="sectionPage__articles__item__title">
+									<?php _e( $u_post->post_title , LANG ); ?></h3>
+								<!-- Extracto 30 palabras -->
+								<p class="sectionPage__articles__item__excerpt text-justify">
+									<?php _e( wp_trim_words( $u_post->post_content , 30 , '' ) , LANG ); ?>
+								</p>
+								<!-- Boton ver más -->
+								<a class="read-more" href="<?= $u_post->guid ?>">Leer más 
+									<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+								</a>
+								
+							</div>
+
+						<!-- Limpiar float --> <div style="height:20px;"></div>
+
 						</article><!-- /.sectionPage__articles__item -->
 
 					<?php endforeach; ?>

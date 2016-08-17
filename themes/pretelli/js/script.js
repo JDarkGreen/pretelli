@@ -99,8 +99,8 @@ var j = jQuery.noConflict();
 		/*|----------------------------------------------------------------------|*/
 		j("#carousel-articles").jCarouselLite({
 			vertical: true,
-			auto    : 1500,
-			speed   : 1500,
+			auto    : 3500,
+			speed   : 3500,
 			visible : 3,	
   		});
 

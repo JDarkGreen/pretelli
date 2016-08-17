@@ -226,17 +226,26 @@ body,html
 
 	//figure
 	figure 
-		background: black
-		margin    : 0 18px 0 0
-		overflow  : hidden
-		width     : 210px
+		background    : black
+		display       : inline-block
+		margin        : 0 18px 0 0
+		max-height    : 117px 
+		overflow      : hidden
+		vertical-align: top 
+		width         : 210px
+
 		img 
-			+transition( all 400ms ease )
+			+transition( all 1.5s ease-in )
 		//hover 
 		&:hover 
 			img 
 				+transform( scale( 1.7 ) )
- 
+ 	
+	//seccion contenido
+	.container-text
+		display: inline-block
+		width  : 65%
+
 	//title
 	h3.sectionPage__articles__item__title
 		color      : $violet_color
@@ -247,6 +256,7 @@ body,html
 	p.sectionPage__articles__item__excerpt
 		color    : $gray_color
 		font-size: 14px
+		margin   : 0 auto 3px 
 	//link
 	a.read-more
 		color          : $violet_color
@@ -485,6 +495,7 @@ body,html
 //Seccion
 .pageBlog__content
 	justify-content: space-around
+
 //Artículos
 .pageBlog__article
 	margin: 0 0 20px
@@ -521,6 +532,15 @@ body,html
 			//icon 
 			i 
 				animation: pulse-right 1200ms ease-in-out infinite
+
+//Preview de single blog 
+.pageBlog__article--preview
+	figure 
+		max-height: 188px
+	//Títulos 
+	h2 
+		height  : 100px 
+		overflow: hidden
 
 //* SINGLE BLOG
 .singleBlog__article

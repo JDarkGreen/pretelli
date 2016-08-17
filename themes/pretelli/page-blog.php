@@ -33,7 +33,7 @@
 				$articulos = get_posts( $args );
 				foreach( $articulos as $articulo ) :
 			?>
-				<article class="pageBlog__article">
+				<article class="pageBlog__article pageBlog__article--preview">
 					<!-- Imagen -->
 					<figure>
 						<a href="<?= $articulo->guid ?>">
