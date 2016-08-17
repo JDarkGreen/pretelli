@@ -46,10 +46,13 @@
 
 	<!-- Seccion de Servicios -->
 	<section class="pageWrapper__content">
+		
+		<!-- Titulo --><h2 class="PageCommon__subtitle PageCommon__subtitle--no-border text-uppercase"><?php _e( $post->post_title , LANG ); ?></h2> 
+		<!-- /.PageCommon__subtitle -->
+		
 		<div class="row">
 			<!-- Seccion Historia -->
 			<div class="col-xs-12 col-md-6">
-				<!-- Titulo --><h2 class="PageCommon__subtitle PageCommon__subtitle--no-border text-uppercase"><?php _e( $post->post_title , LANG ); ?></h2> <!-- /.PageCommon__subtitle -->
 
 				<!-- Contenido -->
 				<div class="text-justify">
