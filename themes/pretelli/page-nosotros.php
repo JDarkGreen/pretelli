@@ -34,6 +34,9 @@
 					?> 
 				</div> <!-- /.text-justify -->
 
+				<!-- Separación  --> 
+				<br/><br/>
+
 				<!-- Logo de Empresa -->
 				<?php 
 					$logo_empresa = get_the_post_thumbnail( $post->ID , 'full' , array('class'=>'img-fluid center-block') );

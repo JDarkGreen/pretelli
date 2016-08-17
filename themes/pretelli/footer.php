@@ -87,7 +87,7 @@
 						</ul><!-- /mainFooter__social-list  -->	
 
 						<!-- Logo petrelli pagina web -->
-						<a href="<?= site_url() ?>" class="mainFooter__web text-xs-right"> <img src="<?= IMAGES ?>/footer/www_grupo_pretelli.png" alt="" class="img-fluid center-block" /></a>
+						<a href="<?= site_url() ?>" class="mainFooter__web"> <img src="<?= IMAGES ?>/footer/www_grupo_pretelli.png" alt="" class="img-fluid" /></a>
 
 					</section> <!-- /.mainFooter__item -->
  
