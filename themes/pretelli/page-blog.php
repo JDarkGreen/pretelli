@@ -53,6 +53,7 @@
 
 				</article> <!-- /.pageBlog__article -->
 			<?php endforeach; ?>
+			
 		</section> <!-- /.pageBlog__content -->
 	</section> <!-- /.pageNosotros__content -->
 

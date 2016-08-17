@@ -42,15 +42,21 @@
 					<!-- Contenedor de Carousel -->
 					<div id="owl-carousel-servicios" class="">
 						<?php foreach( $servicios as $servicio ) :  ?>
-			          <div class="item-servicio">
-			          	<!-- Conseguir imagen -->
-			          	<?php 
-			          		$img_servicio = get_the_post_thumbnail( $servicio->ID , array('',189) , array('class'=>'img-fluid') ); 
-			          		if( !empty($img_servicio) ) echo $img_servicio;
-			          	?>
-			          	<!-- Titulo del servicio -->
-			          	<h2 class="img-servicio__title"><?php _e( $servicio->post_title, LANG ); ?></h2>
-			          </div><!-- /.items servicio -->
+
+				          	<div class="item-servicio">
+
+					          	<a href="<?= get_permalink( $servicio->ID ); ?>">
+						          	<!-- Conseguir imagen -->
+						          	<?php 
+						          		$img_servicio = get_the_post_thumbnail( $servicio->ID , array('',189) , array('class'=>'img-fluid') ); 
+						          		if( !empty($img_servicio) ) echo $img_servicio;
+						          	?>
+					          	</a> <!-- /link -->
+
+					          	<!-- Titulo del servicio -->
+					          	<h2 class="img-servicio__title"><?php _e( $servicio->post_title, LANG ); ?></h2>
+
+				          	</div><!-- /.items servicio -->
 						<?php endforeach; ?>
 					</div> <!-- /.owl-carousel-servicios -->
 
